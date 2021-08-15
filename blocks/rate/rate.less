@@ -1,0 +1,49 @@
+@import '../mixins/mixins.less';
+@import '../font/font.less';
+@import '../color/color.less';
+@import '../vars/vars.less';
+
+.rate {
+    position: relative;
+    background-color: @basic_white;
+    padding: 190px 0px 100px 0px;
+    
+
+    &__header {
+        .flex_column(flex-start);
+        padding: 0 50px;
+    }
+
+    &__menu {
+        position: relative;
+        .flex_row(center);
+        .li();
+        padding: 40px 0 15px 0;
+        border-bottom: 1px solid rgba(45, 57, 66, 0.2);
+        
+
+        &_li {
+            .font-size_20();
+            color: @gray;
+
+            & + & {
+                padding: 0 0 0 40px;
+            }
+
+            &:hover {
+                .hover();
+            }
+        }
+
+        &_red {
+            border-bottom: 2px solid @red;
+        }
+    }
+
+    &__cards {
+        position: relative;
+        .flex_scrolling();
+        justify-content: space-between;
+        padding: 50px 50px 40px 50px;
+    }
+}

@@ -1,0 +1,70 @@
+.stocks {
+  position: relative;
+  background-color: #e5e5e5;
+  padding: 140px 0;
+}
+.stocks_title {
+  padding: 0 50px;
+}
+.stocks__offers {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 60px 40px 0 40px;
+}
+.stocks__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 20px;
+  width: 413px;
+}
+.stocks__card:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.stocks__card + .stocks__card {
+  padding: 0 0 0 20px;
+}
+.stocks__text-light {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #475661;
+  opacity: 0.6;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+.stocks__text-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 37px;
+  color: #2d3942;
+  margin: 0;
+  padding: 12px 0 0 0;
+}
+.stocks__text-dark {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 160%;
+  color: #475661;
+  margin: 0;
+  padding: 12px 0 0 0;
+}

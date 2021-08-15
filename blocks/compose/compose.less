@@ -1,0 +1,200 @@
+@import '../mixins/mixins.less';
+@import '../font/font.less';
+@import '../color/color.less';
+@import '../vars/vars.less';
+
+.compose {
+    position: relative;
+    background-color: @basic_white;
+    padding: 0 50px;
+    z-index: 10;
+
+    &__modifier {
+        .flex_row(center);
+        padding: 70px 0 0 0;
+
+        &_list {
+            .flex_column(flex-start);
+        }
+
+        &_parameters {
+            .flex_column(flex-start);
+
+            & + & {
+            margin: 20px 0 0 0;
+            }
+        }
+
+        &_header {
+            .flex_row(center);
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        &_header-left {
+            .font-size_24();
+            color: @gray;
+        }
+
+        &_header-right {
+            .font-size_14();
+            color: @gray;
+            opacity: 0.5;
+        }
+
+        &_main {
+            .flex_row(center);
+            padding: 0;
+            margin: 0;
+        }
+
+        &_li {
+            list-style-type: none;
+            .font-size_32();
+            padding: 16px 30px;
+            background: rgba(71, 86, 97, 0.1);
+            border-radius: 40px;
+
+            & + & {
+                margin: 0 0 0 10px;
+            }
+
+            &:hover {
+                .hover();
+            }
+        }
+
+        &_li-color {
+            background-color: @gray;
+            color: @white;
+        }
+
+        &_result {
+            position: relative;
+            background-color: @white;
+            width: 530px;
+            height: 397px;
+            border-radius: @radius20;
+            overflow: hidden;
+            box-shadow: 0px 10px 40px rgba(55, 55, 65, 0.15);
+            padding: 50px 50px 40px 50px;
+            z-index: 1;
+        }
+
+        &_circle {
+            position: absolute;
+            background-color: @turquoise;
+            background-size: contain;
+            width: 397px;
+            height: 397px;
+            border-radius: 50%;
+            left: -80px;
+            top: -80px;
+            z-index: -1;
+        }
+
+        &_block {
+            .flex_column(stretch);
+            width: 100%;
+        }
+
+        &_tarif {
+            .flex_row(flex-start);
+        }
+
+        &_left {
+            .flex_column(flex-start);
+            margin: 0;
+            padding: 0;
+        }
+
+        &_left-li {
+            list-style-type: none;
+            .flex_row(center);
+
+            & + & {
+                margin: 30px 0 0 0;
+            }
+        }
+
+        &_left-text {
+            .font-size_32();
+            padding: 0;
+            margin: 0 0 0 25px;
+        }
+
+        &_right {
+            .flex_column(flex-end);
+            margin: 0;
+            padding: 0;
+            max-width: 180px;
+        }
+
+        &_right-text {
+            .font-size_14();
+            text-align: right;
+            color: @gray;
+            opacity: 0.5;
+            padding: 0;
+            margin: 0;
+        }
+
+        &_right-indent {
+            margin: 0 0 50px 0;
+        }
+
+        &_right-li {
+            .flex_row(center);
+            margin: 0 0 25px 0; 
+        }
+
+        &_right-column {
+            .flex_column(center);            
+            padding: 0 0 0 12px;
+        }
+
+        &_right-big {
+            .font-size_54();
+            margin: 0;        
+            padding: 0;
+        }
+
+        &_right-underline {
+            border-bottom: 1px solid rgba(45, 57, 66, 0.4);
+            padding: 0 0 10px 0;
+
+            &:last-child {
+                border-bottom: none;
+                padding: 10px 0 0 0;
+            }
+        }
+    }
+
+    &__footer {
+        position: relative;
+        .flex_column(center);
+    }
+
+    &__button {
+        position: relative;
+        .font-size_20();
+        background-color: @red;
+        color: @white;
+        border: none;
+        padding: 17px 200px;
+    }
+
+    &__detailed {
+        position: relative;
+        .font-size_14();
+        color: @gray;
+        opacity: 0.6;
+        padding: 20px 0;
+        margin: 0;
+
+        &:hover {
+            .hover();
+        }
+    }
+}
