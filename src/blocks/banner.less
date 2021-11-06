@@ -1,0 +1,140 @@
+@import './_mixins.less';
+@import './_font.less';
+@import './_color.less';
+@import './_vars.less';
+
+.banner {
+    position: relative;
+    background-color: @basic_white;
+    .flex_row(center);
+
+    &__all {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 1380px;
+        height: 605px;
+        margin: 0;
+    }
+
+    &__info {
+        max-width: 542px;
+        .flex_column(flex-start);
+        margin: 0;
+        padding: 0;
+
+        &_title {
+            .font-size_66();
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+
+        &_description {
+            .font-size_26();
+            margin: 0;
+            padding: 0;
+            opacity: 0.7;
+        }
+
+        &_button {
+            .font-size_26();
+            background-color: @red;
+            color: @white;
+            padding: 15px 60px;
+            margin: 45px 0 0 0;
+            border: none;
+        }
+    }
+
+    &__picture {
+        position: relative;
+        max-width: 100%;
+    }
+
+    &__circle {
+        position: relative;
+        width: 444px;
+        height: 444px;
+        background-color: @red;
+        border-radius: 50%;
+
+
+        &_img {
+            position: absolute;
+            width: 592px;
+            height: 367px;
+            top: 0;
+            right: -50px;
+        }
+    }
+
+    &__pointer {
+        position: relative;
+
+        &:hover {
+            .hover();
+        }
+    }
+
+    &__scrolling {
+        position: absolute;
+        .flex_row(center);
+        left: 630px;
+        bottom: 100px;
+
+        &_red {
+            position: absolute;
+            left: -7px;
+
+            &:hover {
+                .hover();
+            }
+        }
+
+        &_gray {
+            position: relative;
+            padding: 0 20px 0 0;
+
+            &:last-child {
+                padding: 0;
+            }
+
+            &:hover {
+                .hover();
+            }
+        }
+    }
+
+    &__action {
+        position: absolute;
+        .flex_row(center);
+        background-color: @white;
+        bottom: -50px;
+        left: 100px;
+        padding: 25px 30px;
+        border-radius: 20px;
+        box-shadow: 0px 10px 40px rgba(55, 55, 65, 0.15);
+        z-index: 10;
+
+        &_address {
+            .flex_row(center);
+            padding: 0 80px 0 0;
+
+            &:last-child {
+                padding: 0;
+            }
+
+            &:hover {
+                .hover();
+            }
+        }
+
+        &_heading {
+            .font-size_20();
+            padding: 0 0 0 20px;
+        }
+    }
+
+}

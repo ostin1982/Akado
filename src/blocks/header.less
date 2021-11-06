@@ -1,0 +1,111 @@
+@import './_mixins.less';
+@import './_font.less';
+@import './_color.less';
+@import './_vars.less';
+
+.header {
+    .font-size_12();
+    position: relative;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 20px 50px 0 50px;
+    background-color: @white;
+
+    &__main-nav-wrapper {
+        .flex_row(center);
+        margin: 0 0 17px 0;        
+        
+
+        &_menu-left {
+            .flex_row(center);
+            padding: 0;
+            margin: 0;
+        }
+
+        &_menu-right {
+            .flex_row(center);
+            padding: 0;
+            margin: 0;
+        }
+
+        &_data {
+            .flex_row(center);
+            padding: 0 0 0 25px;
+        }
+
+        &_li { 
+            .li();           
+
+            &:hover {
+                .hover();
+            }
+
+            & + & {
+                padding: 0 0 0 20px;
+            }
+        }
+
+        &_button {
+            border: none;
+            background-color: @white; 
+            color: @black;
+            padding: 0;
+
+            &:hover {
+                .hover();
+            }
+        }
+
+        &_red {
+            color: @red;
+        }
+
+        &_underline {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px solid @red;
+        }
+
+        &_position {
+            .flex_row(center);
+
+            & + & {
+                padding: 0 0 0 25px;
+            }
+        }
+
+        &_img {
+            padding: 0 10px 0 0;
+        }
+    }
+
+    &__site-nav-wrapper {
+        .flex_row(center);
+        padding: 30px 0 25px 0;
+        border-top: 1px solid @gray;
+
+        &_menu {
+            .flex_row(center);
+            .li();
+        }
+
+        &_li {
+            .font-size_20();
+
+            &:hover {
+                .hover();
+            }
+
+            & + & {
+                padding: 0 0 0 35px;
+            }
+        }
+
+        &_button {
+            .font-size_20();
+            color: @red;
+            border: 1px solid @red;
+            padding: 7px 34px;
+        }
+    }
+}
