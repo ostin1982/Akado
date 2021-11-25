@@ -1,0 +1,56 @@
+@import './_mixins.less';
+@import './_font.less';
+@import './_color.less';
+@import './_vars.less';
+
+.stocks {
+    position: relative;
+    background-color: @basic_white;
+    padding: 140px 0;
+
+    &_title {
+        padding: 0 50px;
+    }
+
+    &__offers {
+        position: relative;
+        .flex_scrolling();
+        padding: 60px 40px 0 40px;
+    }
+
+    &__card {
+        .flex_column(flex-start);
+        border-radius: @radius20;
+        width: 413px;
+
+        &:hover {
+            .hover();
+        }
+
+        & + & {
+            padding: 0 0 0 20px;
+        }
+    }
+
+    &__text-light {
+        .font-size_18();
+        color: @gray;
+        opacity: 0.6;
+        margin: 0;
+        padding: 20px 0 0 0;
+    }
+
+    &__text-heading {
+        .font-size_32();
+        color: @black;
+        margin: 0;
+        padding: 12px 0 0 0;
+    }
+
+    &__text-dark {
+        .font-size_18();
+        color: @gray;
+        margin: 0;
+        padding: 12px 0 0 0;
+    }
+}

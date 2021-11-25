@@ -1,0 +1,32 @@
+@import './_vars.less';
+
+.flex_row(@alignitems) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: @alignitems;
+}
+
+.flex_column(@alignitems) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: @alignitems;
+}
+
+.flex_scrolling() {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.hover() {
+    opacity: @opacity;
+    cursor: pointer;
+}
+
+.link() {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
