@@ -109,6 +109,61 @@
             }
         }
 
+        &_search {
+            position: relative;
+            display: block;
+            background-color: @white; 
+            color: @black;
+            padding: 0;
+            width: 100%;
+            max-width: 18px;
+            transition: 0.4s linear;
+            overflow: hidden;
+
+            &:hover {
+                .hover();
+            }
+
+            &:focus-within {
+                max-width: 150px;
+
+                .header__main-nav-wrapper_input {
+                    padding-right: 20px;
+
+                    &::placeholder {
+                        color: @gray;
+                    }
+                }
+            }
+        }
+
+        &_input {
+            display: block;
+            appearance: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            border-radius: 9px;
+            background-color: @white;
+            padding: 5px;
+            cursor: pointer;
+            transition: 0.4s linear;
+
+            &::placeholder {
+                color: @white;
+            }
+        }
+
+        &_icon {
+            position: absolute;
+            right: 9px;
+            top: 50%;
+            transform: translate(50%, -50%);
+            width: 18px;
+            height: 19px;
+            pointer-events: none;
+        }
+
         &_position {
             .flex_row(center);
 
