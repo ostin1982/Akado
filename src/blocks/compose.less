@@ -4,7 +4,6 @@
 @import './_vars.less';
 
 .compose {
-    position: relative;
     background-color: @basic_white;
     padding: 0 50px;
     z-index: 10;
@@ -172,12 +171,10 @@
     }
 
     &__footer {
-        position: relative;
         .flex_column(center);
     }
 
     &__button {
-        position: relative;
         .font-size_20();
         background-color: @red;
         color: @white;
@@ -186,12 +183,12 @@
     }
 
     &__detailed {
-        position: relative;
         .font-size_14();
         color: @gray;
         opacity: 0.6;
         padding: 20px 0;
         margin: 0;
+        text-decoration: none;
 
         &:hover {
             .hover();
